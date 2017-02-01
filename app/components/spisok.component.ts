@@ -23,6 +23,8 @@ export class SpisokComponent implements OnInit{
 
   addItem(name: string, mark: number): void {
     this.peopleService.addPeople(name, mark);
+    this.name = "";
+    this.mark = null;
   }
 
   delItem(guid) {

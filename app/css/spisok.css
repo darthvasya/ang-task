@@ -1,3 +1,7 @@
+:host {
+  font-family: monospace;
+}
+
 .panel {
   font-family: sans-serif;
 }

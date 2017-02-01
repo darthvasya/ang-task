@@ -11,7 +11,10 @@ var PeopleService = (function () {
         return this.data;
     };
     PeopleService.prototype.addPeople = function (name, mark) {
-        this.data.push(new People_1.People(name, mark));
+        if (name === "" || mark === undefined)
+            console.log("fsda");
+        else
+            this.data.push(new People_1.People(name, mark));
     };
     PeopleService.prototype.delPeople = function (guid) {
         this.data.splice(this.find(guid), 1);

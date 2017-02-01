@@ -21,6 +21,8 @@ var SpisokComponent = (function () {
     };
     SpisokComponent.prototype.addItem = function (name, mark) {
         this.peopleService.addPeople(name, mark);
+        this.name = "";
+        this.mark = null;
     };
     SpisokComponent.prototype.delItem = function (guid) {
         this.peopleService.delPeople(guid);

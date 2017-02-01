@@ -11,7 +11,11 @@ export class PeopleService {
   }
 
   addPeople(name: string, mark: number) {
-    this.data.push(new People(name, mark));
+    if(name === "" || mark === undefined)
+      console.log("fsda");
+    else
+      this.data.push(new People(name, mark));
+
   }
 
   delPeople(guid: string) {

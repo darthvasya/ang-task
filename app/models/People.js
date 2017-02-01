@@ -10,9 +10,8 @@ var People = (function () {
             return this._name;
         },
         set: function (n) {
-            n = n.toLowerCase();
             var lastLetter = n.charAt(n.length - 1).toUpperCase();
-            n.substr(n.length - 1);
+            n = n.toLowerCase().substring(0, n.length - 1);
             this._name = n + lastLetter;
         },
         enumerable: true,
