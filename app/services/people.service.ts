@@ -2,8 +2,8 @@ import { People } from './../models/People';
 
 export class PeopleService {
   private data: People[] = [
-    { _name: "Petya", _mark: 9 },
-    { _name: "Katya", _mark: 8 }
+    new People("Petya", 12),
+    new People("Natasha", -12)
   ];
 
   getData(): People[] {

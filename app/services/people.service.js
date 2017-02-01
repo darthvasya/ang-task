@@ -1,10 +1,10 @@
 "use strict";
-var People_1 = require('./../models/People');
+var People_1 = require("./../models/People");
 var PeopleService = (function () {
     function PeopleService() {
         this.data = [
-            { _name: "Petya", _mark: 9 },
-            { _name: "Katya", _mark: 8 }
+            new People_1.People("Petya", 12),
+            new People_1.People("Natasha", -12)
         ];
     }
     PeopleService.prototype.getData = function () {
