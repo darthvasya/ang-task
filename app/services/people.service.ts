@@ -15,8 +15,13 @@ export class PeopleService {
   }
 
   delPeople(guid: string) {
-    console.log(guid);
+    this.data.splice(this.find(guid), 1);
   }
 
+  private find(guid: string): number {
+      for (let i: number = 0; i < this.data.length; i++) {
+        if (this.data[i].guid == guid) return i;
+      }
+  }
 
 }

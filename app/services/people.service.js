@@ -14,7 +14,13 @@ var PeopleService = (function () {
         this.data.push(new People_1.People(name, mark));
     };
     PeopleService.prototype.delPeople = function (guid) {
-        console.log(guid);
+        this.data.splice(this.find(guid), 1);
+    };
+    PeopleService.prototype.find = function (guid) {
+        for (var i = 0; i < this.data.length; i++) {
+            if (this.data[i].guid == guid)
+                return i;
+        }
     };
     return PeopleService;
 }());
