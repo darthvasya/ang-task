@@ -38,7 +38,7 @@ export class People {
   public get guid(): string {
     return this._guid;
   }
-  private set guid(g: string) {
+  public set guid(g: string) {
     this._guid = g;
   }
 
