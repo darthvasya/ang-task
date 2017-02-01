@@ -29,7 +29,7 @@ export class People {
         this._mark = m;
     }
   }
-  public get mark(): string {
+  public get mark(): number {
     return this._mark;
   }
 

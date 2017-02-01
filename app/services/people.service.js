@@ -1,5 +1,5 @@
 "use strict";
-var People_1 = require("./../models/People");
+var People_1 = require('./../models/People');
 var PeopleService = (function () {
     function PeopleService() {
         this.data = [

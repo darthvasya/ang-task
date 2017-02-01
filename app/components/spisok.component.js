@@ -19,11 +19,14 @@ var SpisokComponent = (function () {
         this.items = this.peopleService.getData();
         console.log(this.items);
     };
+    SpisokComponent.prototype.addItem = function (name, mark) {
+        this.peopleService.addData(name, mark);
+    };
     SpisokComponent = __decorate([
         core_1.Component({
             selector: 'spisok-comp',
             templateUrl: 'app/templates/spisok.template.html',
-            styleUrls: ['app/css/app.css'],
+            styleUrls: ['node_modules/bootstrap/dist/css/bootstrap.css', 'app/css/spisok.css'],
             providers: [people_service_1.PeopleService]
         }), 
         __metadata('design:paramtypes', [people_service_1.PeopleService])
