@@ -1,5 +1,5 @@
 "use strict";
-var People_1 = require('./../models/People');
+var People_1 = require("./../models/People");
 var PeopleService = (function () {
     function PeopleService() {
         this.data = [
@@ -7,11 +7,14 @@ var PeopleService = (function () {
             new People_1.People("Natasha", -12)
         ];
     }
-    PeopleService.prototype.getData = function () {
+    PeopleService.prototype.getPeoples = function () {
         return this.data;
     };
-    PeopleService.prototype.addData = function (name, mark) {
+    PeopleService.prototype.addPeople = function (name, mark) {
         this.data.push(new People_1.People(name, mark));
+    };
+    PeopleService.prototype.delPeople = function (guid) {
+        console.log(guid);
     };
     return PeopleService;
 }());

@@ -6,12 +6,16 @@ export class PeopleService {
     new People("Natasha", -12)
   ];
 
-  getData(): People[] {
+  getPeoples(): People[] {
     return this.data;
   }
 
-  addData(name: string, mark: number) {
+  addPeople(name: string, mark: number) {
     this.data.push(new People(name, mark));
+  }
+
+  delPeople(guid: string) {
+    console.log(guid);
   }
 
 

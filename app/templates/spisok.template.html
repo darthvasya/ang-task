@@ -22,12 +22,14 @@
                 <tr>
                     <th>Имя</th>
                     <th>Оценка</th>
+                    <th>Удалить</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let item of items">
                     <td>{{item.name}}</td>
                     <td>{{item.mark}}</td>
+                    <td><button class="btn btn-default" (click)="delItem(item.guid)"><span class="glyphicon glyphicon-remove"></span></button></td>
                 </tr>
             </tbody>
         </table>

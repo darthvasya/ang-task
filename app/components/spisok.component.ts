@@ -17,11 +17,15 @@ export class SpisokComponent implements OnInit{
   constructor(private peopleService: PeopleService) {}
 
   ngOnInit() {
-    this.items = this.peopleService.getData();
+    this.items = this.peopleService.getPeoples();
     console.log(this.items);
   }
 
   addItem(name: string, mark: number): void {
-    this.peopleService.addData(name, mark);
+    this.peopleService.addPeople(name, mark);
+  }
+
+  delItem(guid) {
+    this.peopleService.delPeople(guid);
   }
 }

@@ -16,11 +16,14 @@ var SpisokComponent = (function () {
         this.items = [];
     }
     SpisokComponent.prototype.ngOnInit = function () {
-        this.items = this.peopleService.getData();
+        this.items = this.peopleService.getPeoples();
         console.log(this.items);
     };
     SpisokComponent.prototype.addItem = function (name, mark) {
-        this.peopleService.addData(name, mark);
+        this.peopleService.addPeople(name, mark);
+    };
+    SpisokComponent.prototype.delItem = function (guid) {
+        this.peopleService.delPeople(guid);
     };
     SpisokComponent = __decorate([
         core_1.Component({

@@ -1,10 +1,13 @@
 export class People {
+  private _guid: string;
   private _name: string;
   private _mark: number;
+
 
   constructor(userName: string, userMark: number) {
     this.name = userName;
     this.mark = userMark;
+    this._guid = this.getguid();
   }
 
   public set name(n: string) {
@@ -31,6 +34,25 @@ export class People {
   }
   public get mark(): number {
     return this._mark;
+  }
+
+  public get guid(): string {
+    return this._guid;
+  }
+  private set guid(g: string) {
+    this._guid = g;
+  }
+
+
+// infrastructure
+  private getguid(): string {
+    return this.s4() + this.s4() + '-' + this.s4() + '-' + this.s4() + '-' +
+      this.s4() + '-' + this.s4() + this.s4() + this.s4();
+  }
+  private s4(): string {
+    return Math.floor((1 + Math.random()) * 0x10000)
+      .toString(16)
+      .substring(1);
   }
 
 }
